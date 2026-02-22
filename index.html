@@ -91,16 +91,18 @@
                 name="search"
                 id="search"
                 placeholder="Search for Tasks..."
-                class="flex items-center gap-2 py-2 px-3 pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-blue-500/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
+                class="flex items-center gap-2 py-2 px-3 pl-8 md:pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-black/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
               />
-              <button class="absolute top-1/2 -translate-y-1/2 left-0 px-3">
+              <button
+                class="absolute top-1/2 -translate-y-1/2 left-0 px-2 md:px-3"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-5 text-neutral-500"
+                  class="size-4 md:size-5 text-neutral-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -130,7 +132,7 @@
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span class="text-base hidden md:block">Add New</span>
+              <span class="text-base hidden sm:block">Add New</span>
             </button>
           </div>
         </div>
@@ -242,7 +244,118 @@
         </div>
 
         <!-- main content -->
-        <main></main>
+        <main class="px-3 py-5 md:px-4 md:py-6">
+          <!-- overview cards -->
+          <div class="grid sm:grid-cols-3 gap-4">
+            <!-- dashboard overview card -->
+            <div
+              class="w-full h-full bg-neutral-100 border border-black/10 rounded-lg px-2 py-4 md:px-4 md:py-5 md:pb-3"
+            >
+              <div class="flex items-end justify-between">
+                <div class="flex flex-col gap-2 md:gap-3 justify-between">
+                  <div class="text-xs lg:text-sm text-black/60">
+                    Total Tasks
+                  </div>
+                  <div class="text-4xl md:text-5xl font-extrabold mt-auto">
+                    23
+                  </div>
+                </div>
+
+                <!-- card icon -->
+                <div
+                  class="bg-blue-500/40 inline-flex items-center justify-center p-3 rounded-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 md:size-9"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- completed tasks card -->
+            <div
+              class="w-full h-full bg-neutral-100 border border-black/10 rounded-lg px-2 py-4 md:px-4 md:py-5 md:pb-3"
+            >
+              <div class="flex items-end justify-between">
+                <div class="flex flex-col gap-2 md:gap-3 justify-between">
+                  <div class="text-xs lg:text-sm text-black/60">
+                    Completed Tasks
+                  </div>
+                  <div class="text-4xl md:text-5xl font-extrabold mt-auto">
+                    07
+                  </div>
+                </div>
+
+                <!-- card icon -->
+                <div
+                  class="bg-green-500/40 inline-flex items-center justify-center p-3 rounded-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 md:size-9"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- pending tasks card -->
+            <div
+              class="w-full h-full bg-neutral-100 border border-black/10 rounded-lg px-2 py-4 md:px-4 md:py-5 md:pb-3"
+            >
+              <div class="flex items-end justify-between">
+                <div class="flex flex-col gap-2 md:gap-3 justify-between">
+                  <div class="text-xs lg:text-sm text-black/60">
+                    Pending Tasks
+                  </div>
+                  <div class="text-4xl md:text-5xl font-extrabold mt-auto">
+                    13
+                  </div>
+                </div>
+
+                <!-- card icon -->
+                <div
+                  class="bg-yellow-500/40 inline-flex items-center justify-center p-3 rounded-lg"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6 md:size-9"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </div>
 

@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./src/output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Tasks | Taskora</title>
-</head>
+  </head>
   <body>
     <div class="xl:grid xl:grid-cols-12 w-full min-h-screen">
       <aside
@@ -91,16 +91,18 @@
                 name="search"
                 id="search"
                 placeholder="Search for Tasks..."
-                class="flex items-center gap-2 py-2 px-3 pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-blue-500/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
+                class="flex items-center gap-2 py-2 px-3 pl-8 md:pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-black/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
               />
-              <button class="absolute top-1/2 -translate-y-1/2 left-0 px-3">
+              <button
+                class="absolute top-1/2 -translate-y-1/2 left-0 px-2 md:px-3"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-5 text-neutral-500"
+                  class="size-4 md:size-5 text-neutral-500"
                 >
                   <path
                     stroke-linecap="round"
@@ -130,7 +132,7 @@
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-              <span class="text-base hidden md:block">Add New</span>
+              <span class="text-base hidden sm:block">Add New</span>
             </button>
           </div>
         </div>
