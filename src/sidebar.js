@@ -73,3 +73,34 @@ ${sideNavLinks.map((link, index) => (
 
 const sidebarNavigation = document.getElementById("sidebar-navigation");
 sidebarNavigation.appendChild(sideNavLinksComponent);
+
+
+
+
+// username
+const userName = "Gursharan Singh";
+const userUsername = "gursharanme";
+
+const nameInitials = userName
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((word) => word[0]
+        .toUpperCase()).join("");
+
+const userNameSidebarComponent = document.createElement("a");
+userNameSidebarComponent.href = "./settings.html";
+userNameSidebarComponent.className = `flex items-center gap-2 hover:bg-blue-500/10 py-2.5 px-3 rounded-md transition-colors duration-200 ease-in-out`;
+userNameSidebarComponent.innerHTML = `            
+        <div class="bg-blue-500 w-12 h-12 inline-flex items-center justify-center text-lg text-white rounded-full font-semibold leading-0" >
+ ${nameInitials}
+        </div>
+        <div>
+            <div>${userName}</div>
+            <div class="text-sm text-black/50">@${userUsername}</div>
+        </div>`;
+
+const userNameSidebarComponentContainer = document.getElementById("sidebarUsername-container");
+userNameSidebarComponentContainer.appendChild(userNameSidebarComponent);
+
+

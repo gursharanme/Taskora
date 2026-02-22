@@ -6,7 +6,81 @@
         <link rel="stylesheet" href="./src/output.css" />
     <title>Tasks | Taskora</title>
 </head>
-<body>
-    <h1>tasks</h1>
-</body>
+  <body>
+    <div class="xl:grid xl:grid-cols-12 w-full min-h-screen">
+      <aside
+        id="sidebar"
+        class="absolute top-0 left-0 w-[90%] md:w-1/2 xl:w-full xl:static xl:col-span-3 border-r border-black/10 h-screen z-999 px-3 py-5 md:px-4 md:py-6 hidden xl:block bg-white"
+      >
+        <div class="flex flex-col gap-5 h-full">
+          <!-- logo and sidebar close button -->
+          <div class="flex items-center justify-between px-3">
+            <div class="flex items-center gap-2">
+              <div class="h-6 w-6 bg-blue-500 rounded-full"></div>
+              <div role="heading 1" class="text-lg lg:text-xl font-bold">
+                Taskora
+              </div>
+            </div>
+
+            <!-- sidebar close button -->
+            <button
+              id="close-sidebar-mobile"
+              class="bg-transparent hover:bg-black/10 transition-colors duration-200 ease-in-out p-2 rounded-full cursor-pointer xl:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- navigation links -->
+          <nav id="sidebar-navigation"></nav>
+
+          <!-- username -->
+          <div id="sidebarUsername-container" class="mt-auto"></div>
+        </div>
+      </aside>
+      <!-- sidebar -->
+
+      <!-- main -->
+      <div class="xl:col-span-9 min-h-screen">
+        <div class="p-4 md:p-6">
+          <!-- sidebar open button -->
+          <button
+            id="open-sidebar-mobile"
+            class="bg-transparent hover:bg-black/10 transition-colors duration-200 ease-in-out p-2 rounded-full cursor-pointer xl:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"
+              />
+            </svg>
+          </button>
+        </div>
+        <main></main>
+      </div>
+    </div>
+
+    <script src="./src/sidebar.js"></script>
+  </body>
 </html>
