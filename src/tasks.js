@@ -46,7 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const completedTasks = tasks.filter((task) => task.isCompleted === true);
   const pendingTasks = tasks.filter((task) => task.isCompleted === false);
-  const completionRate = (completedTasks.length / tasks.length) * 100;
+  let completionRate = (completedTasks.length / tasks.length) * 100;
+  if (completedTasks.length === 0) {
+    completionRate = "—"
+  } else {
+    completionRate = `${completionRate}%`
+  }
 
   const completedTasksContainer = document.getElementById("completed-task-container");
   completedTasksContainer.textContent = completedTasks.length;
@@ -56,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   const completionRateContainer = document.getElementById("completion-rate-container");
-  completionRateContainer.textContent = `${completionRate}%`;
+  completionRateContainer.textContent = completionRate;
 
 
 
@@ -90,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
               <div
                 class="text-xs lg:text-sm text-black/60 font-semibold text-center flex items-center gap-1"
               >
-                Click the
-                <svg
+                Click
+                [<svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -105,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     d="M12 4.5v15m7.5-7.5h-15"
                   />
                 </svg>
+                <span class="hidden sm:block">Add New</span>]
                 icon at the top.
               </div>
             </div>
