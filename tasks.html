@@ -11,7 +11,7 @@
     <div class="xl:grid xl:grid-cols-12 w-full min-h-screen">
       <aside
         id="sidebar"
-        class="absolute top-0 left-0 w-[90%] md:w-1/2 xl:w-full xl:static xl:col-span-3 border-r border-black/10 h-dvh z-999 px-3 py-5 md:px-4 md:py-6 hidden xl:block bg-white"
+        class="fixed inset-y-0 left-0 w-[85%] sm:w-80 xl:static xl:w-full xl:col-span-3 border-r border-black/10 h-dvh z-9999 px-4 py-6 hidden xl:block bg-white shadow-lg xl:shadow-none transition-transform duration-300 ease-in-out"
       >
         <div class="flex flex-col gap-5 h-full">
           <!-- logo and sidebar close button -->
@@ -96,7 +96,7 @@
                 class="flex items-center gap-2 py-2 px-3 pl-8 md:pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-black/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
               />
               <button
-              id="searchButton"
+                id="searchButton"
                 class="absolute top-1/2 -translate-y-1/2 left-0 px-2 md:px-3"
               >
                 <svg
@@ -139,7 +139,6 @@
             </button>
           </div>
         </div>
-
 
         <!-- add new modal -->
         <div
