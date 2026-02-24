@@ -206,9 +206,9 @@
                   required
                 >
                   <option value="" selected>Select priority level</option>
-                  <option value="low">Low</option>
-                  <option value="low">Medium</option>
-                  <option value="low">High</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
                 </select>
 
                 <button
@@ -233,6 +233,7 @@
 
               <!-- Submit Button -->
               <button
+                id="createNewTaskButton"
                 class="flex items-center gap-2 py-2 px-3 rounded-md transition-colors duration-200 ease-in-out bg-blue-500 hover:bg-blue-600 text-white cursor-pointer font-semibold"
               >
                 <span class="text-base uppercase text-center w-full"
@@ -244,11 +245,30 @@
         </div>
 
         <!-- main content -->
-        <main></main>
+        <main class="px-3 py-5 md:px-4 md:py-6">
+          <!-- top 10 tasks -->
+          <div class="flex items-baseline justify-between mt-0 mb-4">
+            <div class="text-xs lg:text-sm text-black/80 font-semibold">
+              All Tasks
+            </div>
+            <div
+              class="text-xs lg:text-sm text-black/80 hover:text-blue-500 transition-all duration-200 ease-in-out underline"
+            >
+              <a href="./index.html">dashboard</a>
+            </div>
+          </div>
+
+          <!-- tasks -->
+          <div class="w-full h-full">
+            <ul id="taskListContainerAllTasks" class="flex flex-col gap-3"></ul>
+          </div>
+        </main>
       </div>
     </div>
 
     <script src="./src/sidebar.js"></script>
     <script src="./src/createNewModal.js"></script>
+    <script src="./src/tasks.js"></script>
+    <script src="./src/moreoptions.js"></script>
   </body>
 </html>
