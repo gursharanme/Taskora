@@ -8,7 +8,6 @@ if (taskList) {
 
     // Close all menus
     menus.forEach(menu => menu.classList.add("hidden"));
-
     // If a button was clicked, open its menu
     if (button) {
       const menu = button.parentElement.querySelector(".dropdown-menu");
@@ -196,7 +195,7 @@ if (allTaskList) {
 
     // Close all menus
     menus.forEach(menu => menu.classList.add("hidden"));
-
+    
     // If a button was clicked, open its menu
     if (button) {
       const menu = button.parentElement.querySelector(".dropdown-menu");
