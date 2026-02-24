@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const priority = taskPriority.value.trim();
 
     if (!taskName || !priority) {
-      alert("Please enter value");
+      alert("Please enter all information of task");
       return;
     }
 
