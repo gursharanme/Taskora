@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/favicon.png" type="image/x-icon" />
     <title>Taskora - Manage & Track Tasks Easily</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
@@ -15,12 +16,12 @@
         <div class="flex flex-col gap-5 h-full">
           <!-- logo and sidebar close button -->
           <div class="flex items-center justify-between px-3">
-            <div class="flex items-center gap-2">
+            <a href="./index.html" class="flex items-center gap-2 flex-1">
               <div class="h-6 w-6 bg-blue-500 rounded-full"></div>
               <div role="heading 1" class="text-lg lg:text-xl font-bold">
                 Taskora
               </div>
-            </div>
+            </a>
 
             <!-- sidebar close button -->
             <button
@@ -83,17 +84,19 @@
           <div class="flex items-center justify-between gap-2 flex-1">
             <!-- search -->
             <form
-              action=""
+              method="post"
+              id="searchTasksForm"
               class="flex flex-1 max-w-md items-center gap-2 relative"
             >
               <input
                 type="text"
                 name="search"
-                id="search"
+                id="searchTerm"
                 placeholder="Search for Tasks..."
                 class="flex items-center gap-2 py-2 px-3 pl-8 md:pl-11 rounded-md transition-colors duration-200 ease-in-out bg-neutral-100 text-black border border-black/10 focus:border focus:border-blue-500 focus:outline-0 text-sm md:text-base w-full placeholder:text-neutral-500"
               />
               <button
+              id="searchButton"
                 class="absolute top-1/2 -translate-y-1/2 left-0 px-2 md:px-3"
               >
                 <svg
@@ -368,7 +371,7 @@
           <!-- top 10 tasks -->
           <div class="flex items-baseline justify-between mt-10 mb-4">
             <div class="text-xs lg:text-sm text-black/80 font-semibold">
-              Pending Tasks
+              Tasks
             </div>
             <div
               class="text-xs lg:text-sm text-black/80 hover:text-blue-500 transition-all duration-200 ease-in-out underline"
@@ -379,7 +382,10 @@
 
           <!-- tasks -->
           <div class="w-full h-full">
-            <ul id="taskListContainerPendingOnly" class="flex flex-col gap-3"></ul>
+            <ul
+              id="taskListContainerPendingOnly"
+              class="flex flex-col gap-3"
+            ></ul>
           </div>
         </main>
       </div>
