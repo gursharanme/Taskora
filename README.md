@@ -41,16 +41,6 @@ This project focuses on:
 
 ---
 
-## 📂 Project Structure
-
-Taskora/
-│── index.html
-│── style.css (if applicable)
-│── script.js
-│── assets/
-
----
-
 ## 📱 Responsive Design
 
 The layout is optimized using a mobile-first approach and adapts seamlessly across:
@@ -68,18 +58,6 @@ The layout is optimized using a mobile-first approach and adapts seamlessly acro
 * Managing client-side state using localStorage
 * Structuring scalable frontend code
 * Building responsive layouts with Tailwind CSS
-
----
-
-## 🔮 Future Improvements
-
-* Task editing functionality
-* Task filtering (All / Completed / Pending)
-* Priority levels
-* Due dates & reminders
-* Drag-and-drop task sorting
-* Dark mode
-* Migration to React / Next.js version
 
 ---
 
