@@ -110,14 +110,6 @@ npx serve
 
 ---
 
-# 📌 Live Demo
-
-🌐 **Visit Taskora Live Site**
-
-[https://taskora-51k.pages.dev/](https://taskora-51k.pages.dev/)
-
----
-
 # 🤝 Credits
 
 Designed and developed by:
